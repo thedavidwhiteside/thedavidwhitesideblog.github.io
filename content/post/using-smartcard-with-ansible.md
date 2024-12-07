@@ -6,31 +6,21 @@ tags: ["Ansible", "Smartcard", "PIV", "CAC"]
 categories: ["Tech"]
 ---
 
-Integrating a smartcard, such as a Personal Identity Verification (PIV) or Common Access Card (CAC), into your Ansible workflows can enhance security by leveraging certificate-based authentication. This guide explains how to set up and use a smartcard with Ansible.
+As part of the Ansible 2.12 release, pkcs11/smartcards are now supported by Ansible. Now you can use smartcards and other devices that support pkcs11 (Yubikey) to configure systems with Ansible.
 
----
+Setup your middleware for pkcs11, below is how to install opensc on a Mac using homebrew.
 
-### **Prerequisites**
-
-1. **Smartcard (PIV or CAC)**:
-   - Ensure your smartcard is properly provisioned and contains the required certificates.
-
-2. **Smartcard Reader**:
-   - A compatible smartcard reader must be connected to your system.
-
-3. **Required Tools**:
-   - Install `opensc` and `pkcs11-tool`:
-     ```bash
-     sudo apt-get install opensc pcscd
-     ```
-
-4. **SSH Configuration**:
-   - Ensure `ssh-agent` is running and configured to use the smartcard.
-
----
-
-### **Step 1: Verify Smartcard Functionality**
-
-Check that your system recognizes the smartcard by listing the available certificates:
 ```bash
-pkcs11-tool --list-slots
+$ brew install opensc
+```
+
+To use pkcs11 for authentication set the ANSIBLE_PKCS11_PROVIDER environment variable
+
+```bash
+$ export ANSIBLE_PKCS11_PROVIDER=/usr/local/lib/opensc-pkcs11.so
+$ ansible-playbook -u USERNAME -b -k -K PLAYBOOK.yml --connection=ssh
+SSH password: << Enter your PKCS11 Pin for your smartcard
+SUDO password[defaults to SSH password]: << Enter your user account password for sudo
+```
+
+For more details see the [feature PR](https://github.com/ansible/ansible/pull/32829).

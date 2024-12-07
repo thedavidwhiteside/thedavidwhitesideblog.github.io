@@ -21,9 +21,9 @@
     
 
     
-    <meta name="description" content="David Whiteside description">
-    <meta property="og:description" content="David Whiteside description" />
-    <meta property="twitter:description" content="David Whiteside description" />
+    <meta name="description" content="David Whiteside blog on Cloud">
+    <meta property="og:description" content="David Whiteside blog on Cloud" />
+    <meta property="twitter:description" content="David Whiteside blog on Cloud" />
     
 
     
@@ -31,7 +31,7 @@
     
     
 
-    <meta name="keyword"  content="keywords">
+    <meta name="keyword"  content="David Whiteside, David, Whiteside, Tech, Blog, Cloud, HPC">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 
     <title>Tech | David Whiteside Blog</title>
@@ -160,7 +160,7 @@
                 <div class="site-heading">
                     <h1>David Whiteside Blog </h1>
                     
-		    <span class="subheading">slogan</span>
+		    <span class="subheading">People overestimate what can be accomplished in a year, and underestimate what can be accomplished in a decade</span>
                 </div>
             </div>
         </div>
@@ -218,32 +218,15 @@
 	
         <div class="post-content-preview">
 	
-            <p>Integrating a smartcard, such as a Personal Identity Verification (PIV) or Common Access Card (CAC), into your Ansible workflows can enhance security by leveraging certificate-based authentication. This guide explains how to set up and use a smartcard with Ansible.</p>
-<hr>
-<h3 id="prerequisites"><strong>Prerequisites</strong></h3>
-<ol>
-<li>
-<p><strong>Smartcard (PIV or CAC)</strong>:</p>
-<ul>
-<li>Ensure your smartcard is properly provisioned and contains the required certificates.</li>
-</ul>
-</li>
-<li>
-<p><strong>Smartcard Reader</strong>:</p>
-<ul>
-<li>A compatible smartcard reader must be connected to your system.</li>
-</ul>
-</li>
-<li>
-<p><strong>Required Tools</strong>:</p>
-<ul>
-<li>Install <code>opensc</code> and <code>pkcs11-tool</code>:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install opensc pcscd
-</span></span></code></pre></div></li>
-</ul>
-</li>
-<li>
-<p><strong>SSH Configuration</strong>:</p>
+            <p>As part of the Ansible 2.12 release, pkcs11/smartcards are now supported by Ansible. Now you can use smartcards and other devices that support pkcs11 (Yubikey) to configure systems with Ansible.</p>
+<p>Setup your middleware for pkcs11, below is how to install opensc on a Mac using homebrew.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ brew install opensc
+</span></span></code></pre></div><p>To use pkcs11 for authentication set the ANSIBLE_PKCS11_PROVIDER environment variable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">ANSIBLE_PKCS11_PROVIDER</span><span style="color:#ff79c6">=</span>/usr/local/lib/opensc-pkcs11.so
+</span></span><span style="display:flex;"><span>$ ansible-playbook -u USERNAME -b -k -K PLAYBOOK.yml --connection<span style="color:#ff79c6">=</span>ssh
+</span></span><span style="display:flex;"><span>SSH password: <span style="color:#f1fa8c">&lt;&lt; Enter your PKCS11 Pin for your smartcard
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">SUDO password[defaults to SSH password]: &lt;&lt; Enter</span> your user account password <span style="color:#ff79c6">for</span> sudo
+</span></span></code></pre></div><p>For more details see the <a href="https://github.com/ansible/ansible/pull/32829">feature PR</a>.</p>
        
         </div>
     </a>
@@ -268,10 +251,11 @@
 	
             <p>In Solaris, configuring the InfiniBand (IB) node description can make your network easier to manage by assigning meaningful names to nodes. This guide explains how to set the IB node description.</p>
 <hr>
-<h3 id="viewing-the-current-node-description"><strong>Viewing the Current Node Description</strong></h3>
-<p>To view the current node description, use the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ibstat
-</span></span></code></pre></div>
+<p>View the current IB node description</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set_nodedesc.sh
+</span></span></code></pre></div><p>You can set the IB node description to whatever you want using the -N option with set_nodedesc.sh.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set_nodedesc.sh -N <span style="color:#f1fa8c">&#39;something&#39;</span>
+</span></span></code></pre></div><p>You can reference the <a href="https://docs.oracle.com/cd/E86824_01/html/E54764/set-nodedesc-sh-1m.html">man page</a> for the set_nodedesc.sh command to see the full command reference.</p>
        
         </div>
     </a>
@@ -294,38 +278,25 @@
 	
         <div class="post-content-preview">
 	
-            <p>Solaris, like other Unix-based systems, offers multiple commands to manage system states such as shutting down, rebooting, and halting. Each command has specific use cases and functionality. Here’s a quick guide to the differences.</p>
-<hr>
-<h3 id="shutdown-commands-overview">Shutdown Commands Overview</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Functionality</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>shutdown</code></td>
-          <td>Gracefully shuts down the system with warnings to users.</td>
-      </tr>
-      <tr>
-          <td><code>reboot</code></td>
-          <td>Reboots the system immediately.</td>
-      </tr>
-      <tr>
-          <td><code>init</code></td>
-          <td>Changes the system run level.</td>
-      </tr>
-      <tr>
-          <td><code>halt</code></td>
-          <td>Stops the system without syncing disks.</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="1-shutdown"><strong>1. <code>shutdown</code></strong></h3>
-<p>The <code>shutdown</code> command is used to gracefully bring the system down while notifying logged-in users.</p>
+            <p>The init and shutdown commands cleanly shutdown the system by running the shutdown rc scripts.</p>
+<p>The advantage of shutdown is that you can set a shutdown delay and warning message.</p>
+<p>halt and reboot are not as clean, no shutdown rc scripts are run so applications will not be brought down clean, I generally do not use these commands unless its a last resort.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ init   <span style="color:#6272a4"># runs the shutdown scripts in /etc/rc*</span>
+</span></span><span style="display:flex;"><span>$ init <span style="color:#bd93f9">0</span> <span style="color:#6272a4"># shutdown (on sparc it takes it to the ok prompt)</span>
+</span></span><span style="display:flex;"><span>$ init s <span style="color:#6272a4"># single user mode</span>
+</span></span><span style="display:flex;"><span>$ init <span style="color:#bd93f9">5</span> <span style="color:#6272a4"># shutdown</span>
+</span></span><span style="display:flex;"><span>$ init <span style="color:#bd93f9">6</span> <span style="color:#6272a4"># reboot</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ shutdown <span style="color:#6272a4"># runs the shutdown scripts in /etc/rc*, prints message warning users</span>
+</span></span><span style="display:flex;"><span>$ shutdown -y -g <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>$ shutdown -y -i <span style="color:#bd93f9">0</span> <span style="color:#6272a4"># shutdown to ok prompt</span>
+</span></span><span style="display:flex;"><span>$ shutdown -y -i S <span style="color:#6272a4"># single user mode</span>
+</span></span><span style="display:flex;"><span>$ shutdown -y -i <span style="color:#bd93f9">5</span> <span style="color:#6272a4"># shutdown</span>
+</span></span><span style="display:flex;"><span>$ shutdown -y -i <span style="color:#bd93f9">6</span> <span style="color:#6272a4"># reboot</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sync; sync; halt <span style="color:#6272a4"># (ungraceful shutdown, use sync;sync;halt)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sync; sync; reboot <span style="color:#6272a4"># (ungraceful reboot. Always run sync;sync;reboot. The prefered method is using init.)</span>
+</span></span><span style="display:flex;"><span>$ sync; sync; reboot -- -r  <span style="color:#6272a4"># reconfiguration reboot</span>
+</span></span><span style="display:flex;"><span>$ sync; sync; reboot -- -s <span style="color:#6272a4"># reboot into single usermode</span>
+</span></span></code></pre></div>
        
         </div>
     </a>
@@ -348,103 +319,15 @@
 	
         <div class="post-content-preview">
 	
-            <p>The <strong>SPARC OK prompt</strong> is a powerful interface for troubleshooting and configuring SPARC-based systems. This reference provides a quick guide to commonly used commands.</p>
-<hr>
-<h3 id="accessing-the-ok-prompt">Accessing the OK Prompt</h3>
-<ol>
-<li>
-<p><strong>From the operating system</strong>:</p>
-<ul>
-<li>Run the <code>init 0</code> command as root to drop to the OK prompt.</li>
-</ul>
-</li>
-<li>
-<p><strong>From a cold start</strong>:</p>
-<ul>
-<li>Press the <code>Stop</code> key and <code>A</code> simultaneously during boot-up.</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="common-commands">Common Commands</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>printenv</code></td>
-          <td>Displays all system environment variables.</td>
-      </tr>
-      <tr>
-          <td><code>setenv &lt;var&gt; &lt;val&gt;</code></td>
-          <td>Sets an environment variable.</td>
-      </tr>
-      <tr>
-          <td><code>reset</code></td>
-          <td>Resets the system.</td>
-      </tr>
-      <tr>
-          <td><code>boot</code></td>
-          <td>Boots the system from the default boot device.</td>
-      </tr>
-      <tr>
-          <td><code>boot &lt;device&gt;</code></td>
-          <td>Boots the system from a specified device.</td>
-      </tr>
-      <tr>
-          <td><code>probe-scsi</code></td>
-          <td>Probes SCSI devices connected to the system.</td>
-      </tr>
-      <tr>
-          <td><code>devalias</code></td>
-          <td>Lists device aliases.</td>
-      </tr>
-      <tr>
-          <td><code>show-devs</code></td>
-          <td>Displays all devices on the system.</td>
-      </tr>
-      <tr>
-          <td><code>ok help</code></td>
-          <td>Displays general help information.</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="useful-tips">Useful Tips</h3>
-<ul>
-<li>Use <code>banner</code> to display system information, including the firmware version and Ethernet address.</li>
-<li>Use <code>test &lt;device&gt;</code> to perform diagnostics on a specific device.</li>
-</ul>
-<hr>
-<h3 id="reset-commands">Reset Commands</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>reset-all</code></td>
-          <td>Performs a system-wide reset.</td>
-      </tr>
-      <tr>
-          <td><code>sync</code></td>
-          <td>Synchronizes system files before rebooting.</td>
-      </tr>
-      <tr>
-          <td><code>power-off</code></td>
-          <td>Powers down the system.</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<p>For more detailed information, refer to the official SPARC documentation or online resources. The OK prompt is a crucial tool for troubleshooting and managing SPARC systems effectively.</p>
+            <p>Maybe you don’t care about the forth programming language, but if you work on Sparc systems long enough you are going to have to work from the ok prompt.</p>
+<p>Here are the essentials commands you must know.</p>
+<p>Boot the system normally</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot
+</span></span></code></pre></div><p>Boot the system and allow for discovery of new devices (reconfiguration boot)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot -r
+</span></span></code></pre></div><p>Boot into Single-User Mode</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot -s
+</span></span></code></pre></div><p>Boot into a ROM, useful if your system isn’t bootable</p>
        
         </div>
     </a>

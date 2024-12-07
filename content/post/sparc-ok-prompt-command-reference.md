@@ -6,51 +6,71 @@ tags: ["SPARC", "OK Prompt", "Reference"]
 categories: ["Tech"]
 ---
 
-The **SPARC OK prompt** is a powerful interface for troubleshooting and configuring SPARC-based systems. This reference provides a quick guide to commonly used commands.
+Maybe you don’t care about the forth programming language, but if you work on Sparc systems long enough you are going to have to work from the ok prompt.
 
----
+Here are the essentials commands you must know.
 
-### Accessing the OK Prompt
+Boot the system normally
 
-1. **From the operating system**:
-   - Run the `init 0` command as root to drop to the OK prompt.
+```bash
+ok> boot
+```
 
-2. **From a cold start**:
-   - Press the `Stop` key and `A` simultaneously during boot-up.
+Boot the system and allow for discovery of new devices (reconfiguration boot)
 
----
+```bash
+ok> boot -r
+```
 
-### Common Commands
+Boot into Single-User Mode
 
-| Command            | Description                               |
-|--------------------|-------------------------------------------|
-| `printenv`         | Displays all system environment variables. |
-| `setenv <var> <val>` | Sets an environment variable.            |
-| `reset`            | Resets the system.                       |
-| `boot`             | Boots the system from the default boot device. |
-| `boot <device>`    | Boots the system from a specified device. |
-| `probe-scsi`       | Probes SCSI devices connected to the system. |
-| `devalias`         | Lists device aliases.                    |
-| `show-devs`        | Displays all devices on the system.      |
-| `ok help`          | Displays general help information.       |
+```bash
+ok> boot -s
+```
 
----
+Boot into a ROM, useful if your system isn’t bootable
 
-### Useful Tips
+```bash
+ok> boot -F failsafe
+```
 
-- Use `banner` to display system information, including the firmware version and Ethernet address.
-- Use `test <device>` to perform diagnostics on a specific device.
+Boot a global-cluster (suncluster) node into single user non-cluster mode.
 
----
+```bash
+ok> boot -sx
+```
 
-### Reset Commands
+List your network adapters, you can then do boot net — install [device path] to boot from the network using the specified interface
 
-| Command               | Description                             |
-|-----------------------|-----------------------------------------|
-| `reset-all`           | Performs a system-wide reset.          |
-| `sync`                | Synchronizes system files before rebooting. |
-| `power-off`           | Powers down the system.                |
+```bash
+ok> show-nets
+```
 
----
+Useful for determining boot devices and general server components
 
-For more detailed information, refer to the official SPARC documentation or online resources. The OK prompt is a crucial tool for troubleshooting and managing SPARC systems effectively.
+```bash
+ok> show-devs
+```
+
+devalias lists the device aliases where nvalias is used to set them permanently
+
+```bash
+ok> devalias
+ok> nvalias diskname /pathdodevice
+```
+
+Used to set environment variables used for the openboot firmware.
+
+```bash
+ok> printenv
+ok> setenv
+```
+
+(from the OS shell you can use #eeprom auto-boot?=true, for example to set boot environment variables)
+
+shutdown, reboot, etc
+
+```bash
+ok> power-off
+ok> reset-all
+```

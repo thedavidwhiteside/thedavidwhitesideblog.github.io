@@ -21,9 +21,9 @@
     
 
     
-    <meta name="description" content="David Whiteside description">
-    <meta property="og:description" content="David Whiteside description" />
-    <meta property="twitter:description" content="David Whiteside description" />
+    <meta name="description" content="David Whiteside blog on Cloud">
+    <meta property="og:description" content="David Whiteside blog on Cloud" />
+    <meta property="twitter:description" content="David Whiteside blog on Cloud" />
     
 
     
@@ -31,7 +31,7 @@
     
     
 
-    <meta name="keyword"  content="keywords">
+    <meta name="keyword"  content="David Whiteside, David, Whiteside, Tech, Blog, Cloud, HPC">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 
     <title>Ansible | David Whiteside Blog</title>
@@ -160,7 +160,7 @@
                 <div class="site-heading">
                     <h1>David Whiteside Blog </h1>
                     
-		    <span class="subheading">slogan</span>
+		    <span class="subheading">People overestimate what can be accomplished in a year, and underestimate what can be accomplished in a decade</span>
                 </div>
             </div>
         </div>
@@ -192,32 +192,15 @@
 	
         <div class="post-content-preview">
 	
-            <p>Integrating a smartcard, such as a Personal Identity Verification (PIV) or Common Access Card (CAC), into your Ansible workflows can enhance security by leveraging certificate-based authentication. This guide explains how to set up and use a smartcard with Ansible.</p>
-<hr>
-<h3 id="prerequisites"><strong>Prerequisites</strong></h3>
-<ol>
-<li>
-<p><strong>Smartcard (PIV or CAC)</strong>:</p>
-<ul>
-<li>Ensure your smartcard is properly provisioned and contains the required certificates.</li>
-</ul>
-</li>
-<li>
-<p><strong>Smartcard Reader</strong>:</p>
-<ul>
-<li>A compatible smartcard reader must be connected to your system.</li>
-</ul>
-</li>
-<li>
-<p><strong>Required Tools</strong>:</p>
-<ul>
-<li>Install <code>opensc</code> and <code>pkcs11-tool</code>:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install opensc pcscd
-</span></span></code></pre></div></li>
-</ul>
-</li>
-<li>
-<p><strong>SSH Configuration</strong>:</p>
+            <p>As part of the Ansible 2.12 release, pkcs11/smartcards are now supported by Ansible. Now you can use smartcards and other devices that support pkcs11 (Yubikey) to configure systems with Ansible.</p>
+<p>Setup your middleware for pkcs11, below is how to install opensc on a Mac using homebrew.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ brew install opensc
+</span></span></code></pre></div><p>To use pkcs11 for authentication set the ANSIBLE_PKCS11_PROVIDER environment variable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">ANSIBLE_PKCS11_PROVIDER</span><span style="color:#ff79c6">=</span>/usr/local/lib/opensc-pkcs11.so
+</span></span><span style="display:flex;"><span>$ ansible-playbook -u USERNAME -b -k -K PLAYBOOK.yml --connection<span style="color:#ff79c6">=</span>ssh
+</span></span><span style="display:flex;"><span>SSH password: <span style="color:#f1fa8c">&lt;&lt; Enter your PKCS11 Pin for your smartcard
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">SUDO password[defaults to SSH password]: &lt;&lt; Enter</span> your user account password <span style="color:#ff79c6">for</span> sudo
+</span></span></code></pre></div><p>For more details see the <a href="https://github.com/ansible/ansible/pull/32829">feature PR</a>.</p>
        
         </div>
     </a>

@@ -10,8 +10,16 @@ In Solaris, configuring the InfiniBand (IB) node description can make your netwo
 
 ---
 
-### **Viewing the Current Node Description**
+View the current IB node description
 
-To view the current node description, use the following command:
 ```bash
-ibstat
+$ set_nodedesc.sh
+```
+
+You can set the IB node description to whatever you want using the -N option with set_nodedesc.sh.
+
+```bash
+$ set_nodedesc.sh -N 'something'
+```
+
+You can reference the [man page](https://docs.oracle.com/cd/E86824_01/html/E54764/set-nodedesc-sh-1m.html) for the set_nodedesc.sh command to see the full command reference.
