@@ -1,6 +1,6 @@
 ---
 title: "SPARC OK Prompt Command Reference"
-date: 2024-12-07T12:00:00Z
+date: 2011-08-07T12:00:00Z
 draft: false
 tags: ["SPARC", "OK Prompt", "Reference"]
 categories: ["Tech"]

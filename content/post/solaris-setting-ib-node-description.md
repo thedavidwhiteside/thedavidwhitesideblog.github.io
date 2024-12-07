@@ -1,6 +1,6 @@
 ---
 title: "Setting the InfiniBand (IB) Node Description on Solaris"
-date: 2024-12-07T12:00:00Z
+date: 2012-10-07T12:00:00Z
 draft: false
 tags: ["Solaris", "InfiniBand", "Networking"]
 categories: ["Tech"]
