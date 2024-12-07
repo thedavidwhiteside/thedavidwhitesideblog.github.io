@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commands on David Whiteside Blog</title>
+    <link>https://blog.davidwhiteside.com/tags/commands/</link>
+    <description>Recent content in Commands on David Whiteside Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Dec 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.davidwhiteside.com/tags/commands/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solaris Shutdown, Reboot, Init, and Halt Command Differences</title>
+      <link>https://blog.davidwhiteside.com/post/solaris-shutdown-reboot-init-differences/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/post/solaris-shutdown-reboot-init-differences/</guid>
+      <description>&lt;p&gt;Solaris, like other Unix-based systems, offers multiple commands to manage system states such as shutting down, rebooting, and halting. Each command has specific use cases and functionality. Here’s a quick guide to the differences.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;shutdown-commands-overview&#34;&gt;Shutdown Commands Overview&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Command&lt;/th&gt;&#xA;          &lt;th&gt;Functionality&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;shutdown&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Gracefully shuts down the system with warnings to users.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;reboot&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Reboots the system immediately.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;init&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Changes the system run level.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;halt&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Stops the system without syncing disks.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-shutdown&#34;&gt;&lt;strong&gt;1. &lt;code&gt;shutdown&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;shutdown&lt;/code&gt; command is used to gracefully bring the system down while notifying logged-in users.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on David Whiteside Blog</title>
+    <link>https://blog.davidwhiteside.com/tags/networking/</link>
+    <description>Recent content in Networking on David Whiteside Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Dec 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.davidwhiteside.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting the InfiniBand (IB) Node Description on Solaris</title>
+      <link>https://blog.davidwhiteside.com/post/solaris-setting-ib-node-description/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/post/solaris-setting-ib-node-description/</guid>
+      <description>&lt;p&gt;In Solaris, configuring the InfiniBand (IB) node description can make your network easier to manage by assigning meaningful names to nodes. This guide explains how to set the IB node description.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;viewing-the-current-node-description&#34;&gt;&lt;strong&gt;Viewing the Current Node Description&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;To view the current node description, use the following command:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ibstat&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
