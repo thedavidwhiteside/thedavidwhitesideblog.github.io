@@ -1,6 +1,6 @@
 ---
 title: "Using a Smartcard (PIV or CAC) with Ansible"
-date: 2024-12-07T12:00:00Z
+date: 2018-03-07T12:00:00Z
 draft: false
 tags: ["Ansible", "Smartcard", "PIV", "CAC"]
 categories: ["Tech"]

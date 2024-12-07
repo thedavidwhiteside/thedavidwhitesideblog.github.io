@@ -1,6 +1,6 @@
 ---
 title: "Solaris Shutdown, Reboot, Init, and Halt Command Differences"
-date: 2024-12-07T12:00:00Z
+date: 2012-05-07T12:00:00Z
 draft: false
 tags: ["Solaris", "Commands", "Unix"]
 categories: ["Tech"]
