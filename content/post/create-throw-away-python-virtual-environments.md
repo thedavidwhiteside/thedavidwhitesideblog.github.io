@@ -16,26 +16,18 @@ While Python’s built-in `venv` or tools like `virtualenv` are excellent for ma
 
 ---
 
-### **The Solution**
+### **The Solution** - tempyenv
 
 You can use a simple shell script to automate the creation of throw-away virtual environments.
 
----
+Simply install and use [tempyenv](https://github.com/outbit/tempyenv)
 
-### **Step 1: Create the Script**
-
-Create a script called `tempvenv.sh`:
 ```bash
-#!/bin/bash
-
-# Create a temporary virtual environment
-TEMP_VENV=$(mktemp -d)
-python3 -m venv "$TEMP_VENV"
-
-# Activate the virtual environment
-source "$TEMP_VENV/bin/activate"
-
-# Provide instructions for the user
-echo "Temporary virtual environment activated."
-echo "To exit, type 'deactivate'."
-echo "The environment will be deleted after you exit."
+$ python -m pip install tempyenv
+$ tempyenv
+(tempyenv) is setting up your virtual environment...hold tight
+Virtual environment created at /var/folders/4b/dnp21z017cg_rbgfdtzclqlm0000gn/T/tmpacwjkg5z/venv
+Virtual environment loading from /var/folders/4b/dnp21z017cg_rbgfdtzclqlm0000gn/T/tmpacwjkg5z/venv
+(tempyenv)(venv) $ pip install whatever_package_you_need
+(tempyenv)(venv) $ exit # or ctrl-d
+```

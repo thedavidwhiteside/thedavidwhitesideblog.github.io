@@ -21,9 +21,9 @@
     
 
     
-    <meta name="description" content="David Whiteside description">
-    <meta property="og:description" content="David Whiteside description" />
-    <meta property="twitter:description" content="David Whiteside description" />
+    <meta name="description" content="David Whiteside blog on Cloud">
+    <meta property="og:description" content="David Whiteside blog on Cloud" />
+    <meta property="twitter:description" content="David Whiteside blog on Cloud" />
     
 
     
@@ -31,7 +31,7 @@
     
     
 
-    <meta name="keyword"  content="keywords">
+    <meta name="keyword"  content="David Whiteside, David, Whiteside, Tech, Blog, Cloud, HPC">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 
     <title>OK Prompt | David Whiteside Blog</title>
@@ -160,7 +160,7 @@
                 <div class="site-heading">
                     <h1>David Whiteside Blog </h1>
                     
-		    <span class="subheading">slogan</span>
+		    <span class="subheading">People overestimate what can be accomplished in a year, and underestimate what can be accomplished in a decade</span>
                 </div>
             </div>
         </div>
@@ -192,103 +192,15 @@
 	
         <div class="post-content-preview">
 	
-            <p>The <strong>SPARC OK prompt</strong> is a powerful interface for troubleshooting and configuring SPARC-based systems. This reference provides a quick guide to commonly used commands.</p>
-<hr>
-<h3 id="accessing-the-ok-prompt">Accessing the OK Prompt</h3>
-<ol>
-<li>
-<p><strong>From the operating system</strong>:</p>
-<ul>
-<li>Run the <code>init 0</code> command as root to drop to the OK prompt.</li>
-</ul>
-</li>
-<li>
-<p><strong>From a cold start</strong>:</p>
-<ul>
-<li>Press the <code>Stop</code> key and <code>A</code> simultaneously during boot-up.</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="common-commands">Common Commands</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>printenv</code></td>
-          <td>Displays all system environment variables.</td>
-      </tr>
-      <tr>
-          <td><code>setenv &lt;var&gt; &lt;val&gt;</code></td>
-          <td>Sets an environment variable.</td>
-      </tr>
-      <tr>
-          <td><code>reset</code></td>
-          <td>Resets the system.</td>
-      </tr>
-      <tr>
-          <td><code>boot</code></td>
-          <td>Boots the system from the default boot device.</td>
-      </tr>
-      <tr>
-          <td><code>boot &lt;device&gt;</code></td>
-          <td>Boots the system from a specified device.</td>
-      </tr>
-      <tr>
-          <td><code>probe-scsi</code></td>
-          <td>Probes SCSI devices connected to the system.</td>
-      </tr>
-      <tr>
-          <td><code>devalias</code></td>
-          <td>Lists device aliases.</td>
-      </tr>
-      <tr>
-          <td><code>show-devs</code></td>
-          <td>Displays all devices on the system.</td>
-      </tr>
-      <tr>
-          <td><code>ok help</code></td>
-          <td>Displays general help information.</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="useful-tips">Useful Tips</h3>
-<ul>
-<li>Use <code>banner</code> to display system information, including the firmware version and Ethernet address.</li>
-<li>Use <code>test &lt;device&gt;</code> to perform diagnostics on a specific device.</li>
-</ul>
-<hr>
-<h3 id="reset-commands">Reset Commands</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>reset-all</code></td>
-          <td>Performs a system-wide reset.</td>
-      </tr>
-      <tr>
-          <td><code>sync</code></td>
-          <td>Synchronizes system files before rebooting.</td>
-      </tr>
-      <tr>
-          <td><code>power-off</code></td>
-          <td>Powers down the system.</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<p>For more detailed information, refer to the official SPARC documentation or online resources. The OK prompt is a crucial tool for troubleshooting and managing SPARC systems effectively.</p>
+            <p>Maybe you don’t care about the forth programming language, but if you work on Sparc systems long enough you are going to have to work from the ok prompt.</p>
+<p>Here are the essentials commands you must know.</p>
+<p>Boot the system normally</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot
+</span></span></code></pre></div><p>Boot the system and allow for discovery of new devices (reconfiguration boot)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot -r
+</span></span></code></pre></div><p>Boot into Single-User Mode</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ok&gt; boot -s
+</span></span></code></pre></div><p>Boot into a ROM, useful if your system isn’t bootable</p>
        
         </div>
     </a>

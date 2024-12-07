@@ -21,9 +21,9 @@
     
 
     
-    <meta name="description" content="David Whiteside description">
-    <meta property="og:description" content="David Whiteside description" />
-    <meta property="twitter:description" content="David Whiteside description" />
+    <meta name="description" content="David Whiteside blog on Cloud">
+    <meta property="og:description" content="David Whiteside blog on Cloud" />
+    <meta property="twitter:description" content="David Whiteside blog on Cloud" />
     
 
     
@@ -31,7 +31,7 @@
     
     
 
-    <meta name="keyword"  content="keywords">
+    <meta name="keyword"  content="David Whiteside, David, Whiteside, Tech, Blog, Cloud, HPC">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 
     <title>InfiniBand | David Whiteside Blog</title>
@@ -160,7 +160,7 @@
                 <div class="site-heading">
                     <h1>David Whiteside Blog </h1>
                     
-		    <span class="subheading">slogan</span>
+		    <span class="subheading">People overestimate what can be accomplished in a year, and underestimate what can be accomplished in a decade</span>
                 </div>
             </div>
         </div>
@@ -194,10 +194,11 @@
 	
             <p>In Solaris, configuring the InfiniBand (IB) node description can make your network easier to manage by assigning meaningful names to nodes. This guide explains how to set the IB node description.</p>
 <hr>
-<h3 id="viewing-the-current-node-description"><strong>Viewing the Current Node Description</strong></h3>
-<p>To view the current node description, use the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ibstat
-</span></span></code></pre></div>
+<p>View the current IB node description</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set_nodedesc.sh
+</span></span></code></pre></div><p>You can set the IB node description to whatever you want using the -N option with set_nodedesc.sh.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set_nodedesc.sh -N <span style="color:#f1fa8c">&#39;something&#39;</span>
+</span></span></code></pre></div><p>You can reference the <a href="https://docs.oracle.com/cd/E86824_01/html/E54764/set-nodedesc-sh-1m.html">man page</a> for the set_nodedesc.sh command to see the full command reference.</p>
        
         </div>
     </a>
