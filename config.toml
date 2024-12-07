@@ -9,6 +9,7 @@ preserveTaxonomyNames = true
 paginate = 5 #frontpage pagination
 hasCJKLanguage = true
 publishDir = "docs"
+relURL = "img/favicon.ico"
 
 [outputs]
 home = ["HTML", "RSS"]
