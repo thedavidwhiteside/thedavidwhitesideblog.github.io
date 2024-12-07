@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.davidwhiteside.com/categories/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.davidwhiteside.com/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://blog.davidwhiteside.com/post/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
+    <loc>https://blog.davidwhiteside.com/tags/programming/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/software-design/</loc>
+    <loc>https://blog.davidwhiteside.com/tags/software-design/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/software-design-basics/</loc>
+    <loc>https://blog.davidwhiteside.com/post/software-design-basics/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.davidwhiteside.com/tags/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tech/</loc>
+    <loc>https://blog.davidwhiteside.com/categories/tech/</loc>
     <lastmod>2024-12-07T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.davidwhiteside.com/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/notes/</loc>
+    <loc>https://blog.davidwhiteside.com/notes/</loc>
   </url><url>
-    <loc>http://localhost:1313/archive/</loc>
+    <loc>https://blog.davidwhiteside.com/archive/</loc>
   </url>
 </urlset>
