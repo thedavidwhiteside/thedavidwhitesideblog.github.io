@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Smartcard on David Whiteside Blog</title>
-    <link>https://blog.davidwhiteside.com/tags/smartcard/</link>
+    <link>http://localhost:1313/tags/smartcard/</link>
     <description>Recent content in Smartcard on David Whiteside Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Mar 2018 12:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.davidwhiteside.com/tags/smartcard/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/smartcard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using a Smartcard (PIV or CAC) with Ansible</title>
-      <link>https://blog.davidwhiteside.com/post/using-smartcard-with-ansible/</link>
+      <link>http://localhost:1313/post/using-smartcard-with-ansible/</link>
       <pubDate>Wed, 07 Mar 2018 12:00:00 +0000</pubDate>
-      <guid>https://blog.davidwhiteside.com/post/using-smartcard-with-ansible/</guid>
+      <guid>http://localhost:1313/post/using-smartcard-with-ansible/</guid>
       <description>&lt;p&gt;Integrating a smartcard, such as a Personal Identity Verification (PIV) or Common Access Card (CAC), into your Ansible workflows can enhance security by leveraging certificate-based authentication. This guide explains how to set up and use a smartcard with Ansible.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;prerequisites&#34;&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Smartcard (PIV or CAC)&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ensure your smartcard is properly provisioned and contains the required certificates.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Smartcard Reader&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A compatible smartcard reader must be connected to your system.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Required Tools&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Install &lt;code&gt;opensc&lt;/code&gt; and &lt;code&gt;pkcs11-tool&lt;/code&gt;:&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install opensc pcscd&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;SSH Configuration&lt;/strong&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
