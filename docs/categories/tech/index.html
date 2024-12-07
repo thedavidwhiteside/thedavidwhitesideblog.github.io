@@ -185,34 +185,266 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
-    <a href="https://blog.davidwhiteside.com/post/software-design-basics/">
+    <a href="https://blog.davidwhiteside.com/post/solaris-setting-ib-node-description/">
         <h2 class="post-title">
-            Software Design Basics
+            Setting the InfiniBand (IB) Node Description on Solaris
         </h2>
 	
         <div class="post-content-preview">
 	
-            <h3 id="what-is-software-design">What is Software Design?</h3>
-<p>Software design is the process of defining the architecture, components, interfaces, and other characteristics of a software system. Good design ensures that software is efficient, maintainable, and scalable.</p>
+            <p>In Solaris, configuring the InfiniBand (IB) node description can make your network easier to manage by assigning meaningful names to nodes. This guide explains how to set the IB node description.</p>
 <hr>
-<h3 id="key-principles-of-software-design">Key Principles of Software Design</h3>
+<h3 id="viewing-the-current-node-description"><strong>Viewing the Current Node Description</strong></h3>
+<p>To view the current node description, use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ibstat
+</span></span></code></pre></div>
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by David Whiteside Blog on Saturday, December 7, 2024
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://blog.davidwhiteside.com/post/create-throw-away-python-virtual-environments/">
+        <h2 class="post-title">
+            Simple Tool to Create Throw-Away Python Virtual Environments
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            <p>Managing Python dependencies in isolated environments is a common practice in software development. But what if you need a quick, temporary virtual environment that you can discard after use? Here’s a simple tool and workflow to create throw-away Python virtual environments.</p>
+<hr>
+<h3 id="the-problem"><strong>The Problem</strong></h3>
+<p>While Python’s built-in <code>venv</code> or tools like <code>virtualenv</code> are excellent for managing environments, they require setup and cleanup. For quick experiments or isolated dependency installations, this process can feel cumbersome.</p>
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by David Whiteside Blog on Saturday, December 7, 2024
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://blog.davidwhiteside.com/post/solaris-shutdown-reboot-init-differences/">
+        <h2 class="post-title">
+            Solaris Shutdown, Reboot, Init, and Halt Command Differences
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            <p>Solaris, like other Unix-based systems, offers multiple commands to manage system states such as shutting down, rebooting, and halting. Each command has specific use cases and functionality. Here’s a quick guide to the differences.</p>
+<hr>
+<h3 id="shutdown-commands-overview">Shutdown Commands Overview</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Functionality</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>shutdown</code></td>
+          <td>Gracefully shuts down the system with warnings to users.</td>
+      </tr>
+      <tr>
+          <td><code>reboot</code></td>
+          <td>Reboots the system immediately.</td>
+      </tr>
+      <tr>
+          <td><code>init</code></td>
+          <td>Changes the system run level.</td>
+      </tr>
+      <tr>
+          <td><code>halt</code></td>
+          <td>Stops the system without syncing disks.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="1-shutdown"><strong>1. <code>shutdown</code></strong></h3>
+<p>The <code>shutdown</code> command is used to gracefully bring the system down while notifying logged-in users.</p>
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by David Whiteside Blog on Saturday, December 7, 2024
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://blog.davidwhiteside.com/post/sparc-ok-prompt-command-reference/">
+        <h2 class="post-title">
+            SPARC OK Prompt Command Reference
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            <p>The <strong>SPARC OK prompt</strong> is a powerful interface for troubleshooting and configuring SPARC-based systems. This reference provides a quick guide to commonly used commands.</p>
+<hr>
+<h3 id="accessing-the-ok-prompt">Accessing the OK Prompt</h3>
 <ol>
 <li>
-<p><strong>Simplicity</strong></p>
+<p><strong>From the operating system</strong>:</p>
 <ul>
-<li>Keep the design simple to reduce complexity and make the code easier to understand and maintain.</li>
-<li>Follow the KISS principle: &ldquo;Keep It Simple, Stupid.&rdquo;</li>
+<li>Run the <code>init 0</code> command as root to drop to the OK prompt.</li>
 </ul>
 </li>
 <li>
-<p><strong>Modularity</strong></p>
+<p><strong>From a cold start</strong>:</p>
 <ul>
-<li>Divide the system into smaller, independent modules.</li>
-<li>Each module should focus on a single responsibility (Single Responsibility Principle).</li>
+<li>Press the <code>Stop</code> key and <code>A</code> simultaneously during boot-up.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="common-commands">Common Commands</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>printenv</code></td>
+          <td>Displays all system environment variables.</td>
+      </tr>
+      <tr>
+          <td><code>setenv &lt;var&gt; &lt;val&gt;</code></td>
+          <td>Sets an environment variable.</td>
+      </tr>
+      <tr>
+          <td><code>reset</code></td>
+          <td>Resets the system.</td>
+      </tr>
+      <tr>
+          <td><code>boot</code></td>
+          <td>Boots the system from the default boot device.</td>
+      </tr>
+      <tr>
+          <td><code>boot &lt;device&gt;</code></td>
+          <td>Boots the system from a specified device.</td>
+      </tr>
+      <tr>
+          <td><code>probe-scsi</code></td>
+          <td>Probes SCSI devices connected to the system.</td>
+      </tr>
+      <tr>
+          <td><code>devalias</code></td>
+          <td>Lists device aliases.</td>
+      </tr>
+      <tr>
+          <td><code>show-devs</code></td>
+          <td>Displays all devices on the system.</td>
+      </tr>
+      <tr>
+          <td><code>ok help</code></td>
+          <td>Displays general help information.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="useful-tips">Useful Tips</h3>
+<ul>
+<li>Use <code>banner</code> to display system information, including the firmware version and Ethernet address.</li>
+<li>Use <code>test &lt;device&gt;</code> to perform diagnostics on a specific device.</li>
+</ul>
+<hr>
+<h3 id="reset-commands">Reset Commands</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>reset-all</code></td>
+          <td>Performs a system-wide reset.</td>
+      </tr>
+      <tr>
+          <td><code>sync</code></td>
+          <td>Synchronizes system files before rebooting.</td>
+      </tr>
+      <tr>
+          <td><code>power-off</code></td>
+          <td>Powers down the system.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p>For more detailed information, refer to the official SPARC documentation or online resources. The OK prompt is a crucial tool for troubleshooting and managing SPARC systems effectively.</p>
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by David Whiteside Blog on Saturday, December 7, 2024
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://blog.davidwhiteside.com/post/using-smartcard-with-ansible/">
+        <h2 class="post-title">
+            Using a Smartcard (PIV or CAC) with Ansible
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            <p>Integrating a smartcard, such as a Personal Identity Verification (PIV) or Common Access Card (CAC), into your Ansible workflows can enhance security by leveraging certificate-based authentication. This guide explains how to set up and use a smartcard with Ansible.</p>
+<hr>
+<h3 id="prerequisites"><strong>Prerequisites</strong></h3>
+<ol>
+<li>
+<p><strong>Smartcard (PIV or CAC)</strong>:</p>
+<ul>
+<li>Ensure your smartcard is properly provisioned and contains the required certificates.</li>
 </ul>
 </li>
 <li>
-<p><strong>Reusability</strong></p>
+<p><strong>Smartcard Reader</strong>:</p>
+<ul>
+<li>A compatible smartcard reader must be connected to your system.</li>
+</ul>
+</li>
+<li>
+<p><strong>Required Tools</strong>:</p>
+<ul>
+<li>Install <code>opensc</code> and <code>pkcs11-tool</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install opensc pcscd
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Configuration</strong>:</p>
        
         </div>
     </a>
@@ -316,6 +548,36 @@
         <h5>FEATURED TAGS</h5>
         <div class="tags">
             
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+            
+               
+                    <a href="/tags/solaris" title="solaris">
+                        solaris
+                    </a>
+               
+            
+               
             
                
             

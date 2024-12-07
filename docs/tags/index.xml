@@ -9,6 +9,55 @@
     <lastBuildDate>Sat, 07 Dec 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.davidwhiteside.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ansible</title>
+      <link>https://blog.davidwhiteside.com/tags/ansible/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CAC</title>
+      <link>https://blog.davidwhiteside.com/tags/cac/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/cac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Commands</title>
+      <link>https://blog.davidwhiteside.com/tags/commands/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/commands/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>InfiniBand</title>
+      <link>https://blog.davidwhiteside.com/tags/infiniband/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/infiniband/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://blog.davidwhiteside.com/tags/networking/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OK Prompt</title>
+      <link>https://blog.davidwhiteside.com/tags/ok-prompt/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/ok-prompt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PIV</title>
+      <link>https://blog.davidwhiteside.com/tags/piv/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/piv/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Programming</title>
       <link>https://blog.davidwhiteside.com/tags/programming/</link>
       <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
@@ -16,10 +65,52 @@
       <description></description>
     </item>
     <item>
-      <title>Software Design</title>
-      <link>https://blog.davidwhiteside.com/tags/software-design/</link>
+      <title>Python</title>
+      <link>https://blog.davidwhiteside.com/tags/python/</link>
       <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
-      <guid>https://blog.davidwhiteside.com/tags/software-design/</guid>
+      <guid>https://blog.davidwhiteside.com/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reference</title>
+      <link>https://blog.davidwhiteside.com/tags/reference/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/reference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smartcard</title>
+      <link>https://blog.davidwhiteside.com/tags/smartcard/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/smartcard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solaris</title>
+      <link>https://blog.davidwhiteside.com/tags/solaris/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/solaris/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPARC</title>
+      <link>https://blog.davidwhiteside.com/tags/sparc/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/sparc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unix</title>
+      <link>https://blog.davidwhiteside.com/tags/unix/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/unix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtual Environments</title>
+      <link>https://blog.davidwhiteside.com/tags/virtual-environments/</link>
+      <pubDate>Sat, 07 Dec 2024 12:00:00 +0000</pubDate>
+      <guid>https://blog.davidwhiteside.com/tags/virtual-environments/</guid>
       <description></description>
     </item>
   </channel>
